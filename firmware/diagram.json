@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "author": "Yash Kuhikar",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -76.8, "left": 43.24, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -57.3, "left": -53.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v28.8", "h57.6", "v-134.4" ] ],
+    [ "dht1:SDA", "esp:16", "green", [ "v115.2", "h192.1", "v-115.2" ] ],
+    [ "dht1:GND", "esp:GND.2", "black", [ "h38.4", "v-172.8", "h115.2" ] ]
+  ],
+  "dependencies": {}
+}
